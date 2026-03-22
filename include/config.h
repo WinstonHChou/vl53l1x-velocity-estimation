@@ -1,6 +1,6 @@
 #pragma once
 
-// #define DEBUG_SERIAL
+#define DEBUG_SERIAL
 
 // 1. Hardware Configuration
 #define START_GATE_GPIO1_PIN    2
@@ -19,7 +19,7 @@
 #define I2C_FAST_MODE_CLOCK_FREQ 400000L
 
 #define I2C_CLOCK_FREQ I2C_FAST_MODE_CLOCK_FREQ
-#define BRIDGE_BAUDRATE 921600  // need headroom for 13+ sensor packets per cycle (was 460800; 13th sensor still dropped)
+#define BRIDGE_BAUDRATE 115200  // need headroom for 13+ sensor packets per cycle (was 460800; 13th sensor still dropped)
 
 #define UPDATE_INTERVAL_MS      100
 

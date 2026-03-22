@@ -122,6 +122,14 @@ void loop() {
       float dt = tofUs / 1000000.0f;
       float velocity = (BASELINE_MM / 1000.0f) / dt;
 
+      #ifdef DEBUG_SERIAL
+      Serial.print("Shot detected! Time of Flight: ");
+      Serial.print(tofUs);
+      Serial.print(" us, Velocity: ");
+      Serial.print(velocity);
+      Serial.println(" m/s");
+      #endif
+
       // Pack and Send
       SensorPacket pkt = {};
       pkt.timestamp_ms = shotStartUs / 1000UL;
